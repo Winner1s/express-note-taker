@@ -1,19 +1,20 @@
 const express = require('express');
 const router = express.Router();
+const fs = require('fs');
 
-const notesController = require('./controllers/notesController');
-const usersController = require('./controllers/usersController');
+const notescontroller = require('../controller/notescontroller.js');
+const usercontroller = require('../controller/usercontroller.js');
 
-router.get('api/notes', notesController.getAllNotes);
-router.get('api/notes/:id', notesController.getNotesById);
-router.post('api/notes', notesController.CreateNote);
-router.put('api/notes/:id', notesController.updateUser);
-router.get('api/notes/:id', notesController.deleteUser);
+router.get('/api/notes', notescontroller.getAllNotes);
+router.get('/api/notes/:id', notescontroller.getNoteById);
+router.post('/api/notes', notescontroller.createNote);
+router.put('/api/notes/:id', notescontroller.updateNote);
+router.delete('/api/notes/:id', notescontroller.deleteNote);
 
-router.get('api/users', usersController.getAllNotes);
-router.get('api/users/:id', usersController.getNotesById);
-router.post('api/users', usersController.CreateNote);
-router.put('api/users/:id', usersController.updateUser);
-router.get('api/users/:id', usersController.deleteUser);
+router.get('/api/users', usercontroller.getAllNotes);
+router.get('/api/users/:id', usercontroller.getNoteById);
+router.post('/api/users', usercontroller.createNote);
+router.put('/api/users/:id', usercontroller.updateNote);
+router.delete('/api/users/:id', usercontroller.deleteNote);
 
-module.exports - router;
+module.exports = router;

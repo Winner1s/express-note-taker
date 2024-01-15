@@ -13,7 +13,7 @@ const indexController = (req, res) => {
 
 };
 
-router.get('/notes', notesController);
+router.get('/notes', notescontroller);
 router.get('*', indexController);
 
 module.exports = express.Router
