@@ -16,4 +16,4 @@ const indexController = (req, res) => {
 router.get('/notes', notesController);
 router.get('*', indexController);
 
-module.exports = express.Router
+module.exports = router
