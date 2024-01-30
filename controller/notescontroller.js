@@ -52,7 +52,7 @@ const updateNote = (req, res) => {
 
         if (index !== -1) {
             const deleteNote = notes.splice(index, 1);
-            res.json(deletedNote[0]);                                                    
+            res.json(deleteNote[0]);                                                    
 
         }
 
@@ -69,3 +69,7 @@ const updateNote = (req, res) => {
         deleteNote,
      };
     
+
+    //  Overall, this code provides the logic for handling CRUD 
+    //  operations on a collection of notes in a web application.
+
