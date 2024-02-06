@@ -1,19 +1,17 @@
-const express = require('express');
-const path = require('path');
+const express = require("express");
+const path = require("path");
 
 const router = express.Router();
 
 const notesController = (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/notes.html'));
-
+  res.sendFile(path.join(__dirname, "../public/notes.html"));
 };
 
 const indexController = (req, res) => {
-    res.sendFile(path.join(__dirname, '../public/index.html'));
-
+  res.sendFile(path.join(__dirname, "../public/index.html"));
 };
 
-router.get('/notes', notesController);
-router.get('*', indexController);
+router.get("/notes", notesController);
+router.get("*", indexController);
 
-module.exports = router
+module.exports = router;
